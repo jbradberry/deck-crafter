@@ -2,7 +2,7 @@
 Deck Crafter
 ============
 
-Many people play Collectable Card Games (or CCGs), but it can be kind
+Many people play Collectible Card Games (or CCGs), but it can be kind
 of a pain to build a deck by rummaging around in a physical collection
 of cards, and friends who want to play will have to have their own
 cards or wait until they have access to yours.  Deck Crafter makes it
