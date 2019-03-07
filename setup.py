@@ -11,7 +11,7 @@ AUTHOR = 'Jeff Bradberry'
 VERSION = None
 
 REQUIRED = [
-    'Django',
+    'Django', 'psycopg2', 'Pillow',
 ]
 
 
