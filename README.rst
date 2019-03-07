@@ -15,7 +15,7 @@ Requirements
 ------------
 
 - Python 3.5+
-- Django 2.1+
+- Django 2.0+
 - PostgreSQL
 
 
