@@ -7,12 +7,18 @@ class Game(models.Model):
     description = models.TextField()
     image = models.ImageField(null=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Edition(models.Model):
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
     name = models.CharField(max_length=64)
     description = models.TextField()
     image = models.ImageField(null=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Card(models.Model):
@@ -22,3 +28,6 @@ class Card(models.Model):
     text = models.TextField()
     image = models.ImageField(null=True)
     artist = models.CharField(max_length=256, blank=True)
+
+    def __str__(self):
+        return self.name
