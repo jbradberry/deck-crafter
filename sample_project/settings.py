@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'deck_crafter',
         'USER': 'drafter',
         'PASSWORD': 'crafter',
-        'HOST': '',
+        'HOST': '127.0.0.1',
         'PORT': '',
     }
 }
