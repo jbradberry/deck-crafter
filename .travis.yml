@@ -7,6 +7,6 @@ python:
 services:
   - postgresql
 before_script:
-  - psql -c 'create role drafter with password crafter;' -U postgres
+  - psql -c 'create role drafter with login password "crafter" createdb;' -U postgres
 install: pip install tox-travis
 script: tox
