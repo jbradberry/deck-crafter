@@ -5,6 +5,10 @@
 {% block header %}<h1>Games</h1>{% endblock %}
 
 {% block content %}
+  {% if is_paginated %}
+  {% include "deck_crafter/pagination.html" %}
+  {% endif %}
+
   <table class="table">
     <thead>
       <tr>
@@ -22,4 +26,8 @@
       {% endfor %}
     </tbody>
   </table>
+
+  {% if is_paginated %}
+  {% include "deck_crafter/pagination.html" %}
+  {% endif %}
 {% endblock %}
