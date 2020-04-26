@@ -1,4 +1,5 @@
 {% extends "deck_crafter/base.html" %}
+{% load thumbnail %}
 
 {% block title %}Games | {{ block.super }}{% endblock %}
 
@@ -20,7 +21,9 @@
     <tbody>
       {% for game in object_list %}
       <tr>
-        <td>{{ game.name }}</td>
+        {% thumbnail game.image "80x40" crop="center" as im %}
+        <td><img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"> {{ game.name }}</td>
+        {% endthumbnail %}
         <td>{{ game.description|truncatechars:120 }}</td>
       </tr>
       {% endfor %}
