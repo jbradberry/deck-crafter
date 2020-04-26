@@ -17,6 +17,7 @@ Requirements
 - Python 3.5+
 - Django 2.0+
 - PostgreSQL
+- sorl-thumbnail
 
 
 Installation
@@ -50,4 +51,5 @@ Add deck_crafter to the ``INSTALLED_APPS`` list in your settings file.
 
         # Added.
         'deck_crafter',
+        'sorl.thumbnail',
     ]
