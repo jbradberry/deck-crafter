@@ -21,9 +21,12 @@
     <tbody>
       {% for game in object_list %}
       <tr>
-        {% thumbnail game.image "80x40" crop="center" as im %}
-        <td><img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"> {{ game.name }}</td>
-        {% endthumbnail %}
+        <td>
+          {% thumbnail game.image "80x40" crop="center" as im %}
+          <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+          {% endthumbnail %}
+          {{ game.name }}
+        </td>
         <td>{{ game.description|truncatechars:120 }}</td>
       </tr>
       {% endfor %}
