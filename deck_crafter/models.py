@@ -9,6 +9,9 @@ class Game(models.Model):
     description = models.TextField(blank=True)
     image = ImageField(upload_to='games', null=True)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 
