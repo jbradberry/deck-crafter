@@ -1,0 +1,35 @@
+{% extends "deck_crafter/base.html" %}
+{% load thumbnail %}
+
+{% block title %}Games | {{ block.super }}{% endblock %}
+
+{% block header %}<h1>Games</h1>{% endblock %}
+
+{% block content %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for game in object_list %}
+      <tr>
+        <td>
+          {% thumbnail game.image "80x40" crop="center" as im %}
+          <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+          {% endthumbnail %}
+          {{ game.name }}
+        </td>
+        <td>{{ game.description|truncatechars:120 }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if is_paginated %}
+  {% include "deck_crafter/pagination.html" %}
+  {% endif %}
+{% endblock %}

@@ -17,6 +17,7 @@ Requirements
 - Python 3.5+
 - Django 2.0+
 - PostgreSQL
+- sorl-thumbnail
 
 
 Installation
@@ -50,4 +51,20 @@ Add deck_crafter to the ``INSTALLED_APPS`` list in your settings file.
 
         # Added.
         'deck_crafter',
+        'sorl.thumbnail',
+    ]
+
+
+Also be sure to include ``deck_crafter.urls`` in your root urlconf.
+
+Example::
+
+    from django.urls import include, url, reverse_lazy
+    from django.views.generic import RedirectView
+
+    urlpatterns = [
+        url(r'^$', RedirectView.as_view(url=reverse_lazy('game_list'), permanent=False)),
+        url(r'^', include('deck_crafter.urls')),
+        url(r'^admin/', include('admin.site.urls')),
+        url(r'^accounts/', include('django.contrib.auth.urls'),
     ]
