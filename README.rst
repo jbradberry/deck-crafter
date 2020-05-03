@@ -2,6 +2,9 @@
 Deck Crafter
 ============
 
+.. image:: https://travis-ci.com/jbradberry/deck-crafter.svg?branch=master
+    :target: https://travis-ci.com/jbradberry/deck-crafter
+
 Many people play Collectible Card Games (or CCGs), but it can be kind
 of a pain to build a deck by rummaging around in a physical collection
 of cards, and friends who want to play will have to have their own
